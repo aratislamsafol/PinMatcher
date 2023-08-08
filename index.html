@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="flex flex-col items-center md:justify-center bg-cyan-700">
+    <div class="md:mt-10 flex flex-col md:flex-row h-[850px] md:h-[500px] md:w-[600px] gap-2 md:gap-6">
+        <div class="shadow-xl shadow-slate-950 pinGenerate rounded-xl flex flex-col gap-12 bg-blue-600 w-full p-10 border h-4/5 md:my-12 my-6 border-green-800" id="pinGenerate">
+            <input type="text" class="h-12 px-3 rounded-md bg-blue-500 font-semibold" name="" id="geneateNum" disabled>
+            <button class=" hover:bg-blue-800 hover:text-blue-white ease-out duration-300 rounded-[540px] bg-blue-900 shadow-4xl h-24 font-bold text-gray-200" id="generateBtn">Pin <br> Generate</button>
+        </div>
+
+        <div class="shadow-xl shadow-slate-950 pinTyper rounded-xl flex flex-col gap-6 bg-blue-600 w-full p-10 border h-4/5 md:my-12 border-green-800" id="pinTyper">
+            <input type="text" name="" id="" class="focus:outline-none PinTyperinputBox rounded-md bg-blue-500 px-2 p-2 m-3" disabled>
+
+            <table class="text-center p-0 m-0">
+                <tr>
+                    <td><input type="button" value="1" onclick="display('1')" /></td>
+                    <td><input type="button" value="2" onclick="display('2')" /></td>
+                    <td><input type="button" value="3" onclick="display('3')" /></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="4" onclick="display('4')" /></td>
+                    <td><input type="button" value="5" onclick="display('5')" /></td>
+                    <td><input type="button" value="6" onclick="display('6')" /></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="7" onclick="display('7')" /></td>
+                    <td><input type="button" value="8" onclick="display('8')" /></td>
+                    <td><input type="button" value="9" onclick="display('9')" /></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="<" onclick="clearOneByOne()" /></td>
+                    <td><input type="button" value="0" onclick="display('0')" /></td>
+                    <td><input type="button" value="c" onclick="clearAll()" /></td>
+                </tr>
+            </table>
+            <button class="border m-auto rounded-md text-white font-gray-300 py-1 bg-blue-900 hover:bg-blue-800  border-blue-900 w-24 text-center ease-out duration-300 shadow-md shadow-blue-800" id="submitBtn">Submit</button>
+        </div>
+    </div>
+    <div class="pinDigitNotify flex flex-col text-center font-semibold text-red-700">
+        
+    </div>
+
+    <div class="pinMatchStatusOn hidden flex flex-col text-center font-semibold">
+        <p class="text-green-200">Pin Match</p>
+    </div>
+    <div class="pinMatchStatusOff hidden flex flex-col text-center font-semibold">
+        <p class="text-red-900">Pin UnMatch</p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
